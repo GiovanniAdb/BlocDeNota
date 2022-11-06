@@ -17,7 +17,7 @@
         android:layout_marginLeft="70dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:hint="Enter Note Title"
+        android:hint="Titulo de la Nota"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
     <!--edit text for note description-->
@@ -36,7 +36,7 @@
         android:layout_marginBottom="300dp"
         android:background="@color/black_shade_1"
         android:gravity="start|top"
-        android:hint="Enter your Note Details"
+        android:hint="Descripcion de la nota"
         android:inputType="textMultiLine"
         android:singleLine="false"
         android:textColor="@color/white"
@@ -56,9 +56,9 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/custom_button_back"
-        android:text="Button"
+        android:text="Guardar"
         android:textAllCaps="false"
-        android:textColor="@color/white" />
+        android:textColor="@color/black_shade_1" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/idFAB2"
@@ -75,7 +75,7 @@
         android:layout_marginBottom="649dp"
         android:src="?attr/actionModeCloseDrawable"
         app:backgroundTint="@color/btnAdd"
-        app:tint="@color/white" />
+        app:tint="@color/black_shade_1" />
 
 
 </RelativeLayout>

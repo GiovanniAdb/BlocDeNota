@@ -33,6 +33,6 @@
         android:layout_marginBottom="609dp"
         android:src="@drawable/ic_add"
         app:backgroundTint="@color/btnAdd"
-        app:tint="@color/white" />
+        app:tint="@color/black_shade_1" />
 
 </RelativeLayout>
