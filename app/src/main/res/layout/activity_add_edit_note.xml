@@ -17,7 +17,8 @@
         android:layout_marginLeft="70dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:hint="Titulo de la Nota"
+        android:hint="@string/titulo_de_la_nota"
+        android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
     <!--edit text for note description-->
@@ -36,7 +37,7 @@
         android:layout_marginBottom="300dp"
         android:background="@color/black_shade_1"
         android:gravity="start|top"
-        android:hint="Descripcion de la nota"
+        android:hint="@string/descripcion_de_la_nota"
         android:inputType="textMultiLine"
         android:singleLine="false"
         android:textColor="@color/white"
@@ -56,12 +57,12 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/custom_button_back"
-        android:text="Guardar"
+        android:text="@string/guardar"
         android:textAllCaps="false"
         android:textColor="@color/black_shade_1" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/idFAB2"
+        android:id="@+id/btnBack"
         android:layout_width="70dp"
         android:layout_height="80dp"
         android:layout_alignParentEnd="true"
@@ -73,6 +74,7 @@
         android:layout_marginEnd="18dp"
         android:layout_marginRight="18dp"
         android:layout_marginBottom="649dp"
+        android:contentDescription="@string/app_name"
         android:src="?attr/actionModeCloseDrawable"
         app:backgroundTint="@color/btnAdd"
         app:tint="@color/black_shade_1" />

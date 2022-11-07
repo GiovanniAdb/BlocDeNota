@@ -1,5 +1,6 @@
 package com.gtappdevelopers.noteapplication
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -7,6 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.gtappdevelopers.noteapplication.R.id
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -15,11 +17,13 @@ class AddEditNoteActivity : AppCompatActivity() {
     lateinit var noteTitleEdt: EditText
     lateinit var noteEdt: EditText
     lateinit var saveBtn: Button
+    lateinit var backHome: Button
 
     //on below line we are creating variable for viewmodal and and integer for our note id.
     lateinit var viewModal: NoteViewModal
     var noteID = -1;
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_edit_note)
@@ -29,9 +33,10 @@ class AddEditNoteActivity : AppCompatActivity() {
             ViewModelProvider.AndroidViewModelFactory.getInstance(application)
         ).get(NoteViewModal::class.java)
         //on below line we are initializing all our variables.
-        noteTitleEdt = findViewById(R.id.idEdtNoteName)
-        noteEdt = findViewById(R.id.idEdtNoteDesc)
-        saveBtn = findViewById(R.id.idBtn)
+        noteTitleEdt = findViewById(id.idEdtNoteName)
+        noteEdt = findViewById(id.idEdtNoteDesc)
+        saveBtn = findViewById(id.idBtn)
+     //   backHome = findViewById(id.btnBack)
 
         //on below line we are getting data passsed via an intent.
         val noteType = intent.getStringExtra("noteType")
@@ -75,5 +80,12 @@ class AddEditNoteActivity : AppCompatActivity() {
             startActivity(Intent(applicationContext, MainActivity::class.java))
             this.finish()
         }
+
+        //Btn para regresar a pantalla principal
+        /*
+        this.backHome.setOnClickListener {
+            startActivity(Intent(applicationContext, MainActivity::class.java))
+        }
+         */
     }
 }
